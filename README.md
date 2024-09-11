@@ -1,6 +1,6 @@
 # MLpapers
 
-Personal collection of machine learning papers. Just using this repo to keep track of papers I've read and want to read.
+Personal collection of machine learning papers. Just to keep track of papers I've read and want to read.
 
 ## Files and Directories
 

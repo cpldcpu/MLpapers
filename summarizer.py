@@ -115,8 +115,8 @@ def generate_json_completion(query, max_depth=5):
 
 def get_paper_info(text):
     query = f"""Extract the following information from the given text and return it as a JSON object:
-    1. Title of the paper
-    2. Authors (as a list. Do **NOT** include email addresses or other information, only names.)
+    1. Title of the paper (Sometimes random spaces are added or removed in the title due to OCR errors, make sure to fix the title)
+    2. Authors (as a list. Do **NOT** include email addresses, affiliation or other information, only names.)
     3. A one-sentence summary of the paper
     4. ArXiv number (if present, otherwise "N/A")
 
@@ -135,13 +135,22 @@ def get_paper_info(text):
         return None
 
 def create_markdown(results, output_file):
+
+
     with open(output_file, 'w', encoding='utf-8') as f:
         for i, paper_info in enumerate(results, 1):
             f.write(f"#### {i}. {paper_info['title']}\n\n")
             f.write(f"*{', '.join(paper_info['authors'])}*\n\n")
             f.write(f"**Summary:** {paper_info['summary']}\n\n")
-            f.write(f"**ArXiv:** {paper_info['arxiv_number']}, ")
-            f.write(f"[Link]({paper_info['file_path']})\n")
+            
+            arxiv_number = paper_info['arxiv_number']
+            if arxiv_number != "N/A":
+                arxiv_link = f"https://arxiv.org/abs/{arxiv_number}"
+                f.write(f"**ArXiv:** [{arxiv_number}]({arxiv_link}), ")
+            else:
+                f.write(f"**ArXiv:** {arxiv_number}, ")
+            
+            f.write(f"[Local link]({paper_info['file_path']})\n\n")
 
 def main(folder_path, output_file):
     results = []

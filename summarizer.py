@@ -5,6 +5,7 @@ import json
 import re
 import logging
 import hashlib
+import urllib.parse
 from datetime import datetime
 
 # Global variables for debugging
@@ -150,9 +151,6 @@ def read_existing_markdown(file_path):
     if os.path.exists(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
-            # Extract file paths and their corresponding hash (if present)
-            # matches = re.findall(r'\[Link to local file\]\((.+?)\)(?:\s+\(Hash: (.+?)\))?', content)
-            # matches = re.findall(r'\((.+?)\)(?:\s+\(Hash: (.+?)\))?', content)
             pattern = r'\*\*ArXiv:\*\* \[(\d+\.\d+)\].*?, \[Local link\]\((.+?)\), Hash: (.+?), \*Added: (.+?)\*'
             matches = re.findall(pattern, content)
             for arxiv_num, file_path, file_hash, date_added in matches:
@@ -175,7 +173,9 @@ def create_or_update_markdown(results, output_file, processed_papers):
                 f.write(f"**ArXiv:** {arxiv_number}, ")
 
             date_added = datetime.now().strftime("%Y-%m-%d")            
-            f.write(f"[Local link]({paper_info['file_path']}), Hash: {paper_info['file_hash']}, *Added: {date_added}* \n\n")
+            
+            escaped_link = urllib.parse.quote(paper_info['file_path'])
+            f.write(f"[Local link]({escaped_link}), Hash: {paper_info['file_hash']}, *Added: {date_added}* \n\n")
 
 def main(folder_path, output_file):
     processed_papers = read_existing_markdown(output_file)

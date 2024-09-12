@@ -46,13 +46,6 @@
 
 **ArXiv:** [1806.09228](https://arxiv.org/abs/1806.09228), [Local link](Papers/1806.09228v1_palettization.pdf), Hash: 3988217769b90c5ec8a068684e558d8c, *Added: 2024-09-12* 
 
-#### Improving Neural Network Quantization without Retraining using Outlier Channel Splitting
-
-*Ritchie Zhao, Yuwei Hu, Jordan Dotzel, Christopher De Sa, Zhiru Zhang*
-
-**Summary:** Quantization can improve the execution latency and energy efficiency of neural networks on both commodity GPUs and specialized accelerators. The majority of existing literature focuses on training quantized DNNs, while this work examines the less-studied topic of quantizing a floating-point model without (re)training.
-
-**ArXiv:** [1901.09504](https://arxiv.org/abs/1901.09504), [Local link](Papers/1901.09504v3_outlier channel splitting.pdf), Hash: 745960627406b452459035a5285e7824, *Added: 2024-09-12* 
 
 #### Learned Step Size Quantization
 
@@ -182,14 +175,6 @@
 
 **ArXiv:** [2109.08668](https://arxiv.org/abs/2109.08668), [Local link](Papers/2109.08668v2_primer_llm_architecture_search.pdf), Hash: b0b2d5391fbd2c9ce4bdf4a29f18ef67, *Added: 2024-09-12* 
 
-#### Rare Gems: Finding Lottery Tickets at Initialization
-
-*Kartik Sreenivasan, Jy-yong Sohn, Liu Yang, Matthew Grinden, Alliot Nagle, Hongyi Wang, Eric Xing, Kangwook Lee, Dimitris Papailiopoulos*
-
-**Summary:** We resolve the open problem of finding lottery tickets at initialization that beat current baselines by proposing GEM-MINER, which finds trainable sparse subnetworks.
-
-**ArXiv:** [2202.12002](https://arxiv.org/abs/2202.12002), [Local link](Papers/2202.12002v2_Finding Lottery Tickets at Initialization.pdf), Hash: 4823419ab710161dca0fd8515e29582f, *Added: 2024-09-12* 
-
 #### Optimal Clipping and Magnitude-aware Differentiation for Improved Quantization-aware Training
 
 *Charbel Sakr, Steve Dai, Rangharajan Venkatesan, Brian Zimmer, William J. Dally, Brucek Khailany*
@@ -277,14 +262,6 @@
 **Summary:** Six-bit quantization (FP6) can effectively reduce the size of large language models (LLMs) and preserve the model quality consistently across varied applications.
 
 **ArXiv:** [2401.14112](https://arxiv.org/abs/2401.14112), [Local link](Papers/2401.14112v2_fp6_llm.pdf), Hash: 7dbfccd4df499b1e6b6fd59857fe094e, *Added: 2024-09-12* 
-
-#### No Free Prune: Information-Theoretic Barriers to Pruning at Initialization
-
-*Tanishq Kumar, Kevin Luo, Mark Sellke*
-
-**Summary:** The existence of “lottery tickets” Frankle & Carbin (2018) at or near initialization raises the tantalizing question of whether large models are necessary in deep learning, or whether sparse networks can be quickly identified and trained without ever training the dense models that contain them. However, efforts to find these sparse subnetworks without training the dense model (“pruning at initialization”) have been broadly unsuccessful Frankle et al. (2020b). We put forward a theoretical explanation for this, based on the model’s effective parameter count ,peff, given by the sum of the number of non-zero weights in the final network and the mutual information between the sparsity mask and the data. We show the Law of Robustness of Bubeck & Sellke (2023) extends to sparse networks with the usual parameter count replaced by peff, meaning a sparse neural network which robustly interpolates noisy data requires a heavily data-dependent mask. We posit that pruning during and after training outputs masks with higher mutual information than those produced by pruning at initialization. Thus two networks may have the same sparsities, but differ in effective parameter count based on how they were trained. This suggests that pruning near initialization may be infeasible and explains why lottery tickets exist, but cannot be found fast (i.e. without training the full network). Experiments on neural networks confirm that information gained during training may indeed affect model capacity.
-
-**ArXiv:** [2402.01089](https://arxiv.org/abs/2402.01089), [Local link](Papers/2402.01089v1_No Free Prune.pdf), Hash: e6582e9efd12f859cbd8be9953195142, *Added: 2024-09-12* 
 
 #### MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases
 
@@ -382,14 +359,6 @@
 
 **ArXiv:** [2407.10969](https://arxiv.org/abs/2407.10969), [Local link](Papers/2407.10969v1_Q-sparse.pdf), Hash: fd79b84fc95a6af58f65017ab49255fa, *Added: 2024-09-12* 
 
-#### Least Squares Quantization in PCM
-
-*Stuart P. Lloyd*
-
-**Summary:** In this paper, the author derives necessary conditions for optimum finite quantization schemes based on minimizing average quantization noise power. The result obtained goes over into the Panter and Dite result as the number of quanta becomes large.
-
-**ArXiv:** N/A, [Local link](Papers/lloyd1982_least_squares_quant.pdf), Hash: e8cfe41ea5354727e98fe6ffd6d7e2e1, *Added: 2024-09-12* 
-
 #### ShiftAddNet: A Hardware-Inspired Deep Network
 
 *Haoran You, Xiaohan Chen, Yongan Zhang, Chaojian Li, Sicheng Li, Zihao Liu, Zhangyang Wang, Yingyan Lin*
@@ -412,5 +381,61 @@
 
 **Summary:** This document describes the OCP Microscaling Formats (MX) Specification, which includes definitions, word usage, overview, basic operations, and more.
 
-**ArXiv:** N/A, [Local link](Papers/OCP_Microscaling Formats (MX) v1.0 Spec_Final.pdf), Hash: 9a52e4a8d4a28b49ecef2a3a3f918337, *Added: 2024-09-12* 
+**ArXiv:** N/A, [Local link](Papers/OCP_Microscaling%20Formats%20(MX)%20v1.0%20Spec_Final.pdf), Hash: 9a52e4a8d4a28b49ecef2a3a3f918337, *Added: 2024-09-12* 
+
+#### Improving Neural Network Quantization without Retraining using Outlier Channel Splitting
+
+*Ritchie Zhao, Yuwei Hu, Jordan Dotzel, Christopher De Sa, Zhiru Zhang*
+
+**Summary:** Quantization can improve the execution latency and energy efficiency of neural networks on both commodity GPUs and specialized accelerators. The majority of existing literature focuses on training quantized DNNs, while this work examines the less-studied topic of quantizing a floating-point model without (re)training.
+
+**ArXiv:** [1901.09504](https://arxiv.org/abs/1901.09504), [Local link](Papers/1901.09504v3_outlier%20channel%20splitting.pdf), Hash: 745960627406b452459035a5285e7824, *Added: 2024-09-12* 
+
+#### DKM: Differentiable k-Means Clustering Layer for Neural Network Compression
+
+*Minsik Cho, Keivan Alizadeh-Vahid, Saurabh Adya, Mohammad Rastegari*
+
+**Summary:** This paper proposes a differentiable k-means clustering layer (DKM) and its application to train-time weight-clustering for deep neural network model compression. DKM enables joint optimization of the DNN parameters and clustering centroids, providing superior compression and accuracy trade-off on ImageNet1k and GLUE benchmarks.
+
+**ArXiv:** [2108.12659v4](https://arxiv.org/abs/2108.12659v4), [Local link](Papers/2108.12659v4_palettization.pdf), Hash: 806791b8719a1735064e32741d0db5b7, *Added: 2024-09-12* 
+
+#### Rare Gems: Finding Lottery Tickets at Initialization
+
+*Kartik Sreenivasan, Jy-yong Sohn, Liu Yang, Matthew Grindenwalt Nagle, Hongyi Wang, Eric Xing, Kangwook Lee, Dimitris Papailiopoulos*
+
+**Summary:** GEM-MINER finds lottery tickets at initialization that beat current baselines, finding trainable networks to accuracy competitive or better than Iterative Magnitude Pruning (IMP), and does so up to 19 times faster.
+
+**ArXiv:** [2202.12002](https://arxiv.org/abs/2202.12002), [Local link](Papers/2202.12002v2_Finding%20Lottery%20Tickets%20at%20Initialization.pdf), Hash: 4823419ab710161dca0fd8515e29582f, *Added: 2024-09-12* 
+
+#### No Free Prune: Information-Theoretic Barriers to Pruning at Initialization
+
+*Tanishq Kumar, Kevin Luo, Mark Sellke*
+
+**Summary:** The existence of lottery tickets Frankle & Carbin (2018) at or near initialization raises the tantalizing question of whether large models are necessary in deep learning, or whether sparse networks can be quickly identified and trained without ever training the dense models that contain them. However, efforts to find these sparse subnetworks without training the dense model ('pruning at initialization') have been broadly unsuccessful Frankle et al. (2020b).
+
+**ArXiv:** [2402.01089](https://arxiv.org/abs/2402.01089), [Local link](Papers/2402.01089v1_No%20Free%20Prune.pdf), Hash: e6582e9efd12f859cbd8be9953195142, *Added: 2024-09-12* 
+
+#### Least Squares Quantization in PCM
+
+*Stuart P. Lloyd*
+
+**Summary:** In this paper, the author derives necessary conditions for optimum finite quantization schemes with a given ensemble of signals to handle, using the optimization criterion that the average quantization noise power be a minimum.
+
+**ArXiv:** N/A, [Local link](Papers/lloyd1982_least_squares_quant.pdf), Hash: e8cfe41ea5354727e98fe6ffd6d7e2e1, *Added: 2024-09-12* 
+
+#### Optimal Brain Damage
+
+*Yann Le Cun, John S. Denker, Sara A. Solla*
+
+**Summary:** We have used information-theoretic ideas to derive a class of practical and nearly optimal schemes for adapting the size of a neural network.
+
+**ArXiv:** N/A, [Local link](Papers/NIPS-1989-optimal-brain-damage-Paper.pdf), Hash: c1bfc00c11a88f7d9abbc1615f100613, *Added: 2024-09-12* 
+
+#### OCP Microscaling Formats (MX) Specification
+
+*Bita Darvish Rouhani, Nitin Garegrat, Tom Savell, Ankit More, Kyung-Nam Han, Ritchie Zhao, Mathew Hall, Jasmine Klar, Eric Chung, Yuan Yu, Microsoft, Michael Schulte, Ralph Wittig, Ian Bratt, Nigel Stephens, Jelena Milanovic, John Brothers, Pradeep Dubey, Marius Cornea, Alexander Heinecke, Andres Rodriguez, Martin Langhammer, Summer Deng, Maxim Naumov, Paulius Micikevicius, Michael Siu, Colin Verrilli*
+
+**Summary:** This Specification defines the Microscaling (MX) format for use in Open Compute Project (OCP) designs to improve efficiency and performance.
+
+**ArXiv:** N/A, [Local link](Papers/OCP_Microscaling%20Formats%20%28MX%29%20v1.0%20Spec_Final.pdf), Hash: 9a52e4a8d4a28b49ecef2a3a3f918337, *Added: 2024-09-12* 
 

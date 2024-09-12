@@ -4,6 +4,8 @@ import requests
 import json
 import re
 import logging
+import hashlib
+from datetime import datetime
 
 # Global variables for debugging
 debug_msg = True
@@ -115,7 +117,7 @@ def generate_json_completion(query, max_depth=5):
 
 def get_paper_info(text):
     query = f"""Extract the following information from the given text and return it as a JSON object:
-    1. Title of the paper (Sometimes random spaces are added or removed in the title due to OCR errors, make sure to fix the title)
+    1. Title of the paper (Sometimes random spaces are added or removed in the title due to OCR errors. Correct titles to use proper spacing and proper english. Convert all caps to title case.)
     2. Authors (as a list. Do **NOT** include email addresses, affiliation or other information, only names.)
     3. A one-sentence summary of the paper
     4. ArXiv number (if present, otherwise "N/A")
@@ -134,12 +136,34 @@ def get_paper_info(text):
         logger.error("Failed to extract paper information")
         return None
 
-def create_markdown(results, output_file):
+def get_file_hash(file_path):
+    """Generate a hash for the file to use as a unique identifier."""
+    hasher = hashlib.md5()
+    with open(file_path, 'rb') as file:
+        buf = file.read()
+        hasher.update(buf)
+    return hasher.hexdigest()
 
+def read_existing_markdown(file_path):
+    """Read the existing markdown file and extract information about processed papers."""
+    processed_papers = {}
+    if os.path.exists(file_path):
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+            # Extract file paths and their corresponding hash (if present)
+            # matches = re.findall(r'\[Link to local file\]\((.+?)\)(?:\s+\(Hash: (.+?)\))?', content)
+            # matches = re.findall(r'\((.+?)\)(?:\s+\(Hash: (.+?)\))?', content)
+            pattern = r'\*\*ArXiv:\*\* \[(\d+\.\d+)\].*?, \[Local link\]\((.+?)\), Hash: (.+?), \*Added: (.+?)\*'
+            matches = re.findall(pattern, content)
+            for arxiv_num, file_path, file_hash, date_added in matches:
+                processed_papers[file_path] = file_hash
+                print(f"Found existing paper: {file_path}, Hash: {file_hash}")
+    return processed_papers
 
-    with open(output_file, 'w', encoding='utf-8') as f:
-        for i, paper_info in enumerate(results, 1):
-            f.write(f"#### {i}. {paper_info['title']}\n\n")
+def create_or_update_markdown(results, output_file, processed_papers):
+    with open(output_file, 'a', encoding='utf-8') as f:
+        for paper_info in results:
+            f.write(f"#### {paper_info['title']}\n\n")
             f.write(f"*{', '.join(paper_info['authors'])}*\n\n")
             f.write(f"**Summary:** {paper_info['summary']}\n\n")
             
@@ -149,24 +173,39 @@ def create_markdown(results, output_file):
                 f.write(f"**ArXiv:** [{arxiv_number}]({arxiv_link}), ")
             else:
                 f.write(f"**ArXiv:** {arxiv_number}, ")
-            
-            f.write(f"[Local link]({paper_info['file_path']})\n\n")
+
+            date_added = datetime.now().strftime("%Y-%m-%d")            
+            f.write(f"[Local link]({paper_info['file_path']}), Hash: {paper_info['file_hash']}, *Added: {date_added}* \n\n")
 
 def main(folder_path, output_file):
-    results = []
+    processed_papers = read_existing_markdown(output_file)
+    new_results = []
+    
     for i, filename in enumerate(os.listdir(folder_path)):
-        if num_of_papers > 0 and i >= num_of_papers:
+        if num_of_papers > 0 and len(new_results) >= num_of_papers:
             break
         if filename.endswith('.pdf'):
             file_path = os.path.join(folder_path, filename)
+            file_hash = get_file_hash(file_path)
+            
+            # Check if the file has been processed before and its hash hasn't changed
+            if file_path in processed_papers and processed_papers[file_path] == file_hash:
+                print(f"Skipping already processed file: {file_path}")
+                continue
+            
             logger.info(f"Processing file: {file_path}")
             text = extract_text_from_pdf(file_path)
             paper_info = get_paper_info(text)
             if paper_info:
                 paper_info['file_path'] = file_path
-                results.append(paper_info)
+                paper_info['file_hash'] = file_hash
+                new_results.append(paper_info)
     
-    create_markdown(results, output_file)
+    if new_results:
+        create_or_update_markdown(new_results, output_file, processed_papers)
+        logger.info(f"Added {len(new_results)} new papers to {output_file}")
+    else:
+        logger.info("No new papers to add.")
 
 if __name__ == "__main__":
     folder_path = "Papers/"

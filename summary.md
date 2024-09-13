@@ -439,3 +439,35 @@
 
 **ArXiv:** N/A, [Local link](Papers/OCP_Microscaling%20Formats%20%28MX%29%20v1.0%20Spec_Final.pdf), Hash: 9a52e4a8d4a28b49ecef2a3a3f918337, *Added: 2024-09-12* 
 
+#### REFT: Reasoning with Reinforced Fine-Tuning
+
+*Trung Quoc Luong, Xinbo Zhang, Zhanming Jie, Peng Sun, Xiaoran Jin, Hang Li*
+
+**Summary:** We propose a simple yet effective approach called Reinforced Fine-Tuning (ReFT) to enhance the generalizability of learning Large Language Models for reasoning, with math problem-solving as an example.
+
+**ArXiv:** [2401.08967](https://arxiv.org/abs/2401.08967), [Local link](Papers/2401.08967v2_REFT.pdf), Hash: 145e3eae6b874df8ba074c18badabd71, *Added: 2024-09-13* 
+
+#### Training Large Language Models for Reasoning through Reverse Curriculum Reinforcement Learning
+
+*Zhiheng Xi, Wenxiang Chen, Boyang Hong, Senjie Jin, Rui Zheng, Wei He, Yiwen Ding, Shichun Liu, Xin Guo, Junzhe Wang, Honglin Guo, Wei Shen, Xiaoran Fan, Yuhao Zhou, Shihan Dou, Xiao Wang, Xinbo Zhang, Peng Sun, Tao Gui, Qi Zhang, Xuanjing Huang*
+
+**Summary:** In this paper, we propose R3: Learning Reasoning through Reverse Curriculum Reinforcement Learning (RL), a novel method that employs only outcome supervision to achieve the benefits of process supervision for large language models.
+
+**ArXiv:** [2402.05808](https://arxiv.org/abs/2402.05808), [Local link](Papers/2402.05808v2_Reverse%20Curriculum%20Reinforcement%20Learning.pdf), Hash: 42efd41e64ac26f1c0c57f9eb44fccd1, *Added: 2024-09-13* 
+
+#### Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking
+
+*Eric Zelikman, Georges Harik, Yijia Shao, Varuna Jayasiri, Nick Haber, Noah D. Goodman*
+
+**Summary:** We present Quiet-STaR, a generalization of STaR in which LMs learn to generate rationales at each token to explain future text, improving their predictions.
+
+**ArXiv:** [2403.09629](https://arxiv.org/abs/2403.09629), [Local link](Papers/2403.09629v2_Quiet-STaR.pdf), Hash: 8cdec7acbfc428496678eee2a098fd1a, *Added: 2024-09-13* 
+
+#### Reinforcement Learning from Reflective Feedback (RLRF): Aligning and Improving LLMs via Fine-Grained Self-Reflection
+
+*Kyungjae Lee, Dasol Hwang, Sunghyun Park, Youngsoo Jang, Moontae Lee*
+
+**Summary:** To overcome challenges in aligning and improving large language models (LLMs) with human preferences, Reinforcement Learning from Reflective Feedback (RLRF) is proposed. It leverages fine-grained feedback based on detailed criteria to improve the core capabilities of LLMs.
+
+**ArXiv:** [2403.14238](https://arxiv.org/abs/2403.14238), [Local link](Papers/2403.14238v1_Reinforcement%20Learning%20from%20Reflective%20Feedback.pdf), Hash: 638fd83a2afcd870acde9aebfc69fe34, *Added: 2024-09-13* 
+

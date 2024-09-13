@@ -151,10 +151,11 @@ def read_existing_markdown(file_path):
     if os.path.exists(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
-            pattern = r'\*\*ArXiv:\*\* \[(\d+\.\d+)\].*?, \[Local link\]\((.+?)\), Hash: (.+?), \*Added: (.+?)\*'
+            pattern = r' \[Local link\]\((.+?)\), Hash: (.+?), \*Added: (.+?)\*'
             matches = re.findall(pattern, content)
-            for arxiv_num, file_path, file_hash, date_added in matches:
-                processed_papers[file_path] = file_hash
+            print(matches)
+            for file_path_escaped, file_hash, date_added in matches:
+                processed_papers[file_path_escaped] = file_hash
                 print(f"Found existing paper: {file_path}, Hash: {file_hash}")
     return processed_papers
 
@@ -187,9 +188,10 @@ def main(folder_path, output_file):
         if filename.endswith('.pdf'):
             file_path = os.path.join(folder_path, filename)
             file_hash = get_file_hash(file_path)
-            
+            file_path_escaped = urllib.parse.quote(file_path)
+
             # Check if the file has been processed before and its hash hasn't changed
-            if file_path in processed_papers and processed_papers[file_path] == file_hash:
+            if file_path_escaped in processed_papers and processed_papers[file_path_escaped] == file_hash:
                 print(f"Skipping already processed file: {file_path}")
                 continue
             

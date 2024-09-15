@@ -471,3 +471,59 @@
 
 **ArXiv:** [2403.14238](https://arxiv.org/abs/2403.14238), [Local link](Papers/2403.14238v1_Reinforcement%20Learning%20from%20Reflective%20Feedback.pdf), Hash: 638fd83a2afcd870acde9aebfc69fe34, *Added: 2024-09-13* 
 
+#### Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
+
+*Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed H. Chi, Quoc V. Le, Denny Zhou*
+
+**Summary:** We explore how generating a chain of thought —a series of intermediate reasoning steps—significantly improves the ability of large language models to perform complex reasoning.
+
+**ArXiv:** [2306.04111](https://arxiv.org/abs/2306.04111), [Local link](Papers/2201.11903v6_Chain-of-Thought.pdf), Hash: bb5cb052621074b4426998fcfeee100b, *Added: 2024-09-14* 
+
+#### STaR: Self-Taught Reasoner Bootstrapping Reasoning With Reasoning
+
+*Eric Zelikman, Yuhuai Wu, Jesse Mu, Noah D. Goodman*
+
+**Summary:** We propose a technique to iteratively leverage a small number of rationale examples and a large dataset without rationales, to bootstrap the ability to perform successively more complex reasoning.
+
+**ArXiv:** [2203.14465](https://arxiv.org/abs/2203.14465), [Local link](Papers/2203.14465v2_STaR_Bootstrapping%20Reasoning%20With%20Reasoning.pdf), Hash: 954323e019ed7433cea0c9c4d466b810, *Added: 2024-09-14* 
+
+#### Let's Verify Step by Step
+
+*Hunter Lightman, Vineet Kosaraju, Yura Burda, Harri Edwards, Bowen Baker, Teddy Lee, Jan Leike, John Schulman, Ilya Sutskever, Karl Cobbe*
+
+**Summary:** In this paper, we compare process supervision and outcome supervision for training reliable language models to solve multi-step reasoning problems. Our investigation shows that process supervision significantly outperforms outcome supervision when applied to the challenging MATH dataset.
+
+**ArXiv:** [2305.20050](https://arxiv.org/abs/2305.20050), [Local link](Papers/2305.20050v1_Let%E2%80%99s%20Verify%20Step%20by%20Step.pdf), Hash: 7b7306d1edb567ccf282872ca7cc58f6, *Added: 2024-09-14* 
+
+#### Training Chain-of-Thought via Latent-Variable Inference
+
+*Du Phan, Matthew D. Hoffman, David Dohan, Sholto Douglas Tuan Anh Le, Aaron Parisi, Pavel Sountsov, Charles Sutton, Sharad Vikram, Rif A. Saurous*
+
+**Summary:** We propose a fine-tuning strategy that tries to maximize the marginal log-likelihood of generating a correct answer using CoT prompting, approximately averaging over all possible rationales.
+
+**ArXiv:** [2304.08306](https://arxiv.org/abs/2304.08306), [Local link](Papers/2312.02179v1.pdf), Hash: d1bcfde44450e930723172a74b4bc72b, *Added: 2024-09-15* 
+
+#### Training Large Language Models for Reasoning through Reverse Curriculum Reinforcement Learning
+
+*Zhiheng Xi, Wenxiang Chen, Boyang Hong, Senjie Jin, Rui Zheng, Wei He, Yiwen Ding, Shichun Liu, Xin Guo, Junzhe Wang, Honglin Guo, Wei Shen, Xiaoran Fan, Yuhao Zhou, Shihan Dou, Xiao Wang, Xinbo Zhang, Peng Sun, Tao Gui, Qi Zhang, Xuanjing Huang*
+
+**Summary:** In this paper, we propose R3: Learning Reasoning through Reverse Curriculum Reinforcement Learning (RL), a novel method that employs only outcome supervision to achieve the benefits of process supervision for large language models.
+
+**ArXiv:** [2402.05808](https://arxiv.org/abs/2402.05808), [Local link](Papers/2402.05808v2.pdf), Hash: 42efd41e64ac26f1c0c57f9eb44fccd1, *Added: 2024-09-15* 
+
+#### ARES: Alternating Reinforcement Learning and Supervised Fine-Tuning for Enhanced Multi-Modal Chain-of-Thought Reasoning Through Diverse AI Feedback
+
+*Ju-Seung Byun, Jiyun Chun, Jihyung Kil, Andrew Perrault*
+
+**Summary:** We propose a two-stage algorithm ARES that Alternates REinforcement Learning (RL) and Supervised Fine-Tuning (SFT) to enhance multi-modal chain-of-thought reasoning through diverse AI feedback.
+
+**ArXiv:** [2407.00087](https://arxiv.org/abs/2407.00087), [Local link](Papers/2407.00087v1.pdf), Hash: c8145601b30ea1f059cb8894448c3b9e, *Added: 2024-09-15* 
+
+#### Large Language Monkeys: Scaling Inference Compute with Repeated Sampling
+
+*Bradley Brown, Jordan Juravsky, Ryan Ehrlich, Ronald Clark, Quoc V. Le, Christopher Ré, Azalia Mirhoseini*
+
+**Summary:** Scaling the amount of compute used to train language models has dramatically improved their capabilities. However, when it comes to inference, we often limit the amount of compute to only one attempt per problem. Here, we explore inference compute as another axis for scaling by increasing the number of generated samples.
+
+**ArXiv:** [2407.21787](https://arxiv.org/abs/2407.21787), [Local link](Papers/2407.21787v1_Scaling%20Inference%20Compute%20with%20repeated%20sampling.pdf), Hash: 54d27c34abf8b6b2893bc0646bc32740, *Added: 2024-09-15* 
+

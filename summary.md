@@ -527,3 +527,51 @@
 
 **ArXiv:** [2407.21787](https://arxiv.org/abs/2407.21787), [Local link](Papers/2407.21787v1_Scaling%20Inference%20Compute%20with%20repeated%20sampling.pdf), Hash: 54d27c34abf8b6b2893bc0646bc32740, *Added: 2024-09-15* 
 
+#### Deep Unsupervised Learning using Nonequilibrium Thermodynamics
+
+*Jascha Sohl-Dickstein, Eric A. Weiss, Niru Maheswaranathan, Surya Ganguli*
+
+**Summary:** A central problem in machine learning involves modeling complex data-sets using highly flexible families of probability distributions in which learning, sampling, inference, and evaluation are still analytically or computationally tractable.
+
+**ArXiv:** [1503.03585](https://arxiv.org/abs/1503.03585), [Local link](Papers/1503.03585v8_Deep%20Unsupervised%20Learning%20using%20Nonequilibrium%20Thermodynamics.pdf), Hash: b1390adda57bbb669fa958add52328c3, *Added: 2024-09-29* 
+
+#### Chain of Thought Empowers Transformers to Solve Inherently Serial Problems
+
+*Zhiyuan Li, Hong Liu, Denny Zhou, Tengyu Ma*
+
+**Summary:** Instructing the model to generate a sequence of intermediate steps, a.k.a., a chain of thought (CoT), is a highly effective method to improve the accuracy of large language models (LLMs) on arithmetics and symbolic reasoning tasks.
+
+**ArXiv:** [2402.12875](https://arxiv.org/abs/2402.12875), [Local link](Papers/2402.12875v3_Chain%20of%20Thought%20Empowers%20Transformers.pdf), Hash: 2bfaabd7d8dea75c933e4b3eab2f66b0, *Added: 2024-09-29* 
+
+#### ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization
+
+*Haoran You, Yipin Guo, Yichao Fu, Wei Zhou, Huihong Shi, Xiaofan Zhang, Souvik Kundu, Amir Yazdanbakhsh, Yingyan (Celine) Lin*
+
+**Summary:** We propose accelerating pretrained LLMs through post-training shift-and-add reparameterization, creating efficient multiplication-free models, dubbed ShiftAddLLM. Specifically, we quantize each weight matrix into binary matrices paired with group-wise scaling factors.
+
+**ArXiv:** [2406.05981](https://arxiv.org/abs/2406.05981), [Local link](Papers/2406.05981v3_ShiftAddLLM.pdf), Hash: a0824c77d773f1e6438ac1bed7fde146, *Added: 2024-09-29* 
+
+#### Scaling LLM Test-Time Compute Optimally Can be More Effective than Scaling Model Parameters
+
+*Charlie Snell, Jaehoon Lee, Kelvin Xu, Aviral Kumar*
+
+**Summary:** In this paper, we study the scaling of inference-time computation in LLMs and find that a 'compute-optimal' scaling strategy can improve test-time compute efficiency by more than 4x compared to a best-of-N baseline.
+
+**ArXiv:** [2408.03314](https://arxiv.org/abs/2408.03314), [Local link](Papers/2408.03314v1_Scaling%20LLM%20Test-Time%20Compute%20Optimally.pdf), Hash: 90d86e47d5568dbce5599bc323c1140b, *Added: 2024-09-29* 
+
+#### Iteration of Thought: Leveraging Inner Dialogue for Autonomous Large Language Model Reasoning
+
+*Santosh Kumar Radha, Yasamin Nouri Jelyani, Ara Ghukasyan, Oktay Goktas*
+
+**Summary:** Using well-structured prompts in a conversational manner, human users can effectively influence an LLM to develop more thoughtful and accurate responses. The Iteration of Thought (IoT) framework enhances LLM responses by generating 'thought'-provoking prompts vis a vis an input query and the current iteration of an LLM's response.
+
+**ArXiv:** [2409.12618](https://arxiv.org/abs/2409.12618), [Local link](Papers/2409.12618v1_Iteration%20of%20Thought.pdf), Hash: 63851d16d472a122bc6875070a6615df, *Added: 2024-09-29* 
+
+#### Training Language Models to Self-Correct via Reinforcement Learning
+
+*Aviral Kumar, Vincent Zhuang, Rishabh Agarwal, Yi Su, JD Co-Reyes, Avi Singh, Kate Baumli, Shariq Iqbal, Colton Bishop, Rebecca Roelofs, Lei M Zhang, Kay McKinney, Disha Shrivastava, Cosmin Paduraru, George Tucker, Doina Precup, Feryal Behbahani, Aleksandra Faust*
+
+**Summary:** Self-correction is a highly desirable capability of large language models (LLMs), yet it has consistently been found to be largely ineffective in modern LLMs. Existing approaches for training self-correction either require multiple models or rely on a more capable model or other forms of supervision.
+
+**ArXiv:** [2409.12917](https://arxiv.org/abs/2409.12917), [Local link](Papers/2409.12917v1_Training%20Language%20Models%20to%20Self-Correct%20via.pdf), Hash: 5d2d16a325b89d46187267d35e2ca0b0, *Added: 2024-09-29* 
+

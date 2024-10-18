@@ -575,3 +575,27 @@
 
 **ArXiv:** [2409.12917](https://arxiv.org/abs/2409.12917), [Local link](Papers/2409.12917v1_Training%20Language%20Models%20to%20Self-Correct%20via.pdf), Hash: 5d2d16a325b89d46187267d35e2ca0b0, *Added: 2024-09-29* 
 
+#### Chain-of-Thought Reasoning without Prompting
+
+*Xuezhi Wang, Denny Zhou*
+
+**Summary:** Our study explores whether large language models can reason effectively without prompting by altering the decoding process to uncover chain-of-thought reasoning paths that are frequently inherent in top-k alternative token sequences.
+
+**ArXiv:** [2402.10200](https://arxiv.org/abs/2402.10200), [Local link](Papers/2402.10200v2_Chain-of-Thought%20Reasoning%20without%20Prompting.pdf), Hash: 5fe4440b5ccee481c078eda2a2cf0575, *Added: 2024-10-18* 
+
+#### GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models
+
+*Iman Mirzadeh, Keivan Alizadeh Hooman Shahrokhi, Oncel Tuzel, Samy Bengio, Mehrdad Farajtabar*
+
+**Summary:** This paper introduces GSM-Symbolic, an improved benchmark for evaluating the mathematical reasoning capabilities of large language models. The study reveals that LLMs exhibit noticeable variance when responding to different instantiations of questions and their performance declines significantly as the number of clauses in a question increases.
+
+**ArXiv:** [2410.05229](https://arxiv.org/abs/2410.05229), [Local link](Papers/2410.05229v1_GSM-Symbolic.pdf), Hash: 0116c4a8ea5e9c013334193b2aed1ef9, *Added: 2024-10-18* 
+
+#### µNAS: Constrained Neural Architecture Search for Microcontrollers
+
+*Edgar Liberis, Łukasz Dudziak, Nicholas D. Lane*
+
+**Summary:** IoT devices are powered by microcontroller units (MCUs) which are extremely resource-scarce: a typical MCU may have an underpowered processor and around 64 KB of mem-ory and persistent storage. Designing neural networks for such a platform requires an intricate balance between keep-ing high predictive performance (accuracy) while achieving low memory and storage usage and inference latency.
+
+**ArXiv:** [2010.11267](https://arxiv.org/abs/2010.11267), [Local link](Papers/3437984.3458836_%CE%BCNAS.pdf), Hash: 97de48ec413ce403e8bfb384cf2d79e1, *Added: 2024-10-18* 
+

@@ -599,3 +599,83 @@
 
 **ArXiv:** [2010.11267](https://arxiv.org/abs/2010.11267), [Local link](Papers/3437984.3458836_%CE%BCNAS.pdf), Hash: 97de48ec413ce403e8bfb384cf2d79e1, *Added: 2024-10-18* 
 
+#### Scaling Laws for Neural Language Models
+
+*Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, Dario Amodei*
+
+**Summary:** We study empirical scaling laws for language model performance on the cross-entropy loss. The loss scales as a power-law with model size, dataset size, and the amount of compute used for training.
+
+**ArXiv:** [2001.08361v1](https://arxiv.org/abs/2001.08361v1), [Local link](Papers/2001.08361v1_Scaling%20Laws%20for%20Neural%20Language%20Models.pdf), Hash: 66bbfa515aad7a216df52938b9c1ecd8, *Added: 2024-11-01* 
+
+#### A Neural Scaling Law from the Dimension of the Data Manifold
+
+*Utkarsh Sharma, Jared Kaplan*
+
+**Summary:** When data is plentiful, the loss achieved by well-trained neural networks scales as a power-law L/N^d in the number of network parameters N. This empirical scaling law holds for a wide variety of data modalities, and may persist over many orders of magnitude.
+
+**ArXiv:** [2004.10802](https://arxiv.org/abs/2004.10802), [Local link](Papers/2004.10802v1_A%20Neural%20Scaling%20Law%20from%20dimension.pdf), Hash: 9417666444dc9b259032695d5f3d1ea3, *Added: 2024-11-01* 
+
+#### Language Models are Few-Shot Learners
+
+*Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, Dario Amodei*
+
+**Summary:** Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training on a large corpus of text followed by fine-tuning on a specific task. Here we show that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even reaching competitiveness with prior state-of-the-art fine-tuning approaches.
+
+**ArXiv:** [2005.14165](https://arxiv.org/abs/2005.14165), [Local link](Papers/2005.14165v4_Language%20Models%20are%20Few-Shot%20Learners.pdf), Hash: f1798481561d9495486bc007180aa998, *Added: 2024-11-01* 
+
+#### Scaling Laws for Autoregressive Generative Modeling
+
+*Tom Henighan, Jared Kaplan, Mor Katz, Mark Chen, Christopher Hesse, Jacob Jackson, Heewoo Jun, Tom B. Brown, Prafulla Dhariwal, Scott Gray, Chris Hallacy, Benjamin Mann, Alec Radford, Aditya Ramesh, Nick Ryder, Daniel M. Ziegler, John Schulman, Dario Amodei, Sam McCandlish*
+
+**Summary:** We identify empirical scaling laws for the cross-entropy loss in four domains: generative image modeling, video modeling, multimodal image & text models, and mathematical problem solving. In all cases autoregressive Transformers smoothly improve in performance as model size and compute budgets increase, following a power-law plus constant scaling law.
+
+**ArXiv:** [2010.14701](https://arxiv.org/abs/2010.14701), [Local link](Papers/2010.14701v2_Scaling%20Laws%20for%20Autoregressive%20Generative%20Modeling.pdf), Hash: 40a9d361e2de911dc404de33743b9b49, *Added: 2024-11-01* 
+
+#### Explaining Neural Scaling Laws
+
+*Yasaman Bahri, Ethan Dyer, Jared Kaplan, Jaehoon Lee, Utkarsh Sharma*
+
+**Summary:** The population loss of trained deep neural networks often follows precise power-law scaling relations with either the size of the training dataset or the number of parameters in the network. We propose a theory that explains the origins of and connects these scaling laws.
+
+**ArXiv:** [2102.06701](https://arxiv.org/abs/2102.06701), [Local link](Papers/2102.06701v2_Explaining%20Neural%20Scaling%20Laws.pdf), Hash: ba5fb65cbb4bcbeadbfb02fb2fcb70fd, *Added: 2024-11-01* 
+
+#### Training Compute-Optimal Large Language Models
+
+*Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de Las Casas, Lisa Anne Hendricks, Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katie Millican, George van den Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen Simonyan, Erich Elsen, Jack W. Rae, Oriol Vinyals, Laurent Sifre*
+
+**Summary:** Weinvestigatetheoptimalmodelsizeandnumberoftokensfortrainingatransformerlanguagemodelunderagivencomputebudget.
+
+**ArXiv:** [2203.15556](https://arxiv.org/abs/2203.15556), [Local link](Papers/2203.15556v1_Training%20Compute-Optimal%20Large%20Language%20Models.pdf), Hash: acb47d6c4ce87a62c9edd0db18610618, *Added: 2024-11-01* 
+
+#### TinyStories: How Small Can Language Models Be and Still Speak Coherent English?
+
+*Ronen Eldan, Yuanzhi Li*
+
+**Summary:** The authors introduce TinyStories, a synthetic dataset of short stories generated by GPT-3.5 and GPT-4, which can be used to train and evaluate language models with below 10 million parameters or simpler architectures while still producing fluent and consistent stories.
+
+**ArXiv:** [2305.07759](https://arxiv.org/abs/2305.07759), [Local link](Papers/2305.07759v2_TinyStories.pdf), Hash: 7265961c095080d829963ae7897bd0db, *Added: 2024-11-01* 
+
+#### Grandmaster-Level Chess Without Search
+
+*Anian Ruoss, Grégoire Delétang, Sourabh Medapati, Jordi Grau-Moya, Li Kevin Wenliang, Elliot Catt, John Reid, Tim Genewein*
+
+**Summary:** This paper investigates the impact of training at scale for chess using a 270M parameter transformer model with supervised learning on a dataset of 10 million chess games, achieving a Lichess blitz Elo of 2895 against humans without explicit search algorithms.
+
+**ArXiv:** [2402.04494](https://arxiv.org/abs/2402.04494), [Local link](Papers/2402.04494v1_Grandmaster-Level%20Chess%20Without%20Search.pdf), Hash: 65fc08a5f98bd21e621e8a7d622c7a52, *Added: 2024-11-01* 
+
+#### SpinQuant: LLM Quantization with Learned Rotations
+
+*Zechun Liu, Changsheng Zhao, Igor Fedorov, Bilge Soran, Dhruv Choudhary, Raghuraman Krishnamoorthi, Vikas Chandra, Yuandong Tian, Tijmen Blankevoort*
+
+**Summary:** SpinQuant is a novel approach that incorporates learned rotation matrices for optimal quantized network accuracy, narrowing the accuracy gap on zero-shot reasoning tasks with full precision to merely 2.9 points on the LLaMA-27B model.
+
+**ArXiv:** [2405.16406](https://arxiv.org/abs/2405.16406), [Local link](Papers/2405.16406v3_spinquant.pdf), Hash: e3bd432556e1f3aef9b8a13a134483f3, *Added: 2024-11-01* 
+
+#### What Matters in Transformers? Not All Attention is Needed
+
+*Shwai He, Guoheng Sun, Zhenyu Shen, Ang Li*
+
+**Summary:** This paper investigates redundancy across different modules within Transformers, including Blocks, MLP, and Attention layers, using a similarity-based metric. Surprisingly, despite the critical role of attention layers in distinguishing transformers from other architectures, they found that a large portion of these layers exhibit excessively high similarity and can be pruned without degrading performance.
+
+**ArXiv:** [2406.15786](https://arxiv.org/abs/2406.15786), [Local link](Papers/2406.15786v6_What%20Matters%20in%20Transformers.pdf), Hash: 605a6dc0714bc49a58e0810eb29c985c, *Added: 2024-11-01* 
+

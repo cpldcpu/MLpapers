@@ -639,14 +639,6 @@
 
 **ArXiv:** [2102.06701](https://arxiv.org/abs/2102.06701), [Local link](Papers/2102.06701v2_Explaining%20Neural%20Scaling%20Laws.pdf), Hash: ba5fb65cbb4bcbeadbfb02fb2fcb70fd, *Added: 2024-11-01* 
 
-#### Training Compute-Optimal Large Language Models
-
-*Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de Las Casas, Lisa Anne Hendricks, Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katie Millican, George van den Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen Simonyan, Erich Elsen, Jack W. Rae, Oriol Vinyals, Laurent Sifre*
-
-**Summary:** Weinvestigatetheoptimalmodelsizeandnumberoftokensfortrainingatransformerlanguagemodelunderagivencomputebudget.
-
-**ArXiv:** [2203.15556](https://arxiv.org/abs/2203.15556), [Local link](Papers/2203.15556v1_Training%20Compute-Optimal%20Large%20Language%20Models.pdf), Hash: acb47d6c4ce87a62c9edd0db18610618, *Added: 2024-11-01* 
-
 #### TinyStories: How Small Can Language Models Be and Still Speak Coherent English?
 
 *Ronen Eldan, Yuanzhi Li*
@@ -678,4 +670,52 @@
 **Summary:** This paper investigates redundancy across different modules within Transformers, including Blocks, MLP, and Attention layers, using a similarity-based metric. Surprisingly, despite the critical role of attention layers in distinguishing transformers from other architectures, they found that a large portion of these layers exhibit excessively high similarity and can be pruned without degrading performance.
 
 **ArXiv:** [2406.15786](https://arxiv.org/abs/2406.15786), [Local link](Papers/2406.15786v6_What%20Matters%20in%20Transformers.pdf), Hash: 605a6dc0714bc49a58e0810eb29c985c, *Added: 2024-11-01* 
+
+#### Roformer: Enhanced Transformer with Rotary Position Embedding
+
+*Jianlin Su, Yu Lu, Shengfeng Pan, Ahmed Murtadha, Bo Wen, Yunfeng Liu*
+
+**Summary:** Position encoding recently has shown effective in the transformer architecture. It enables valuable supervision for dependency modeling between elements at different positions of the sequence.
+
+**ArXiv:** [2104.09864](https://arxiv.org/abs/2104.09864), [Local link](Papers/2104.09864v5_Enhanced%20Transformer%20with%20Rotary%20Position%20Embedding.pdf), Hash: 17b549c747134a1e6e4dba5a51cadf5f, *Added: 2024-11-10* 
+
+#### ReLU2Wins: Discovering Efficient Activation Functions for Sparse LLMs
+
+*Zhengyan Zhang, Yixin Song, Guanghui Yu, Xu Han, Yankai Lin, Chaojun Xiao, Chenyang Song, Zhiyuan Liu, Zeyu Mi, Maosong Sun*
+
+**Summary:** We introduce a general method that defines neuron activation through neuron output magnitudes and a tailored magnitude threshold, demonstrating that non-ReLU LLMs also exhibit sparse activation. We propose a systematic framework to examine the sparsity of LLMs from three aspects: the trade-off between sparsity and performance, the predictivity of sparsity, and the hardware affinity. ReLU2 is identified as the most efficient activation function for sparse LLMs.
+
+**ArXiv:** [2402.03804](https://arxiv.org/abs/2402.03804), [Local link](Papers/2402.03804v1_ReLU2%20Wins.pdf), Hash: 074b27ba8d6ebf98479d64d091f2ffec, *Added: 2024-11-10* 
+
+#### QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs
+
+*Saleh Ashkboos, Amirkeivan Mohtashami, Maximilian L. Croci, Bo Li, Pashmina Cameron, Martin Jaggi, Dan Alistarh, Torsten Hoefler, James Hensman*
+
+**Summary:** We introduce QuaRot, a new Quantization scheme based on Rotations, which is able to quantize LLMs end-to-end, including all weights, activations, and KV cache in 4 bits.
+
+**ArXiv:** [2404.00456](https://arxiv.org/abs/2404.00456), [Local link](Papers/2404.00456v2_QuaRot_Outlier-Free%204-Bit%20Inference%20in%20Rotated%20LLMs.pdf), Hash: 3732a052ae6b60bd43d04b26735507da, *Added: 2024-11-10* 
+
+#### What Matters in Transformers?
+
+*Shwai He, Guoheng Sun, Zhenyu Shen, Ang Li*
+
+**Summary:** This work investigates redundancy across different modules within Transformers, including Blocks, MLP, and Attention layers, using a similarity-based metric. Surprisingly, despite the critical role of attention layers in distinguishing transformers from other architectures, a large portion of these layers exhibit excessively high similarity and can be pruned without degrading performance.
+
+**ArXiv:** [2406.15786](https://arxiv.org/abs/2406.15786), [Local link](Papers/2406.15786v6_Not%20All%20Attention%20is%20Needed.pdf), Hash: 605a6dc0714bc49a58e0810eb29c985c, *Added: 2024-11-10* 
+
+#### BitNet a4.8: 4-bit Activations for 1-bit LLMs
+
+*Hongyu Wang, Shuming Ma, Furu Wei*
+
+**Summary:** In this work, we introduce BitNet a4.8, enabling 4-bit activations for 1-bit Large Language Models (LLMs). It employs a hybrid quantization and sparsification strategy to mitigate the quantization errors introduced by outlier channels.
+
+**ArXiv:** [2411.04965](https://arxiv.org/abs/2411.04965), [Local link](Papers/2411.04965v1_4-bit%20Activations%20for%201-bit%20LLMs.pdf), Hash: 6c0d93572f2ee1d63474ef440d702970, *Added: 2024-11-10* 
+
+#### Training Compute-Optimal Large Language Models
+
+*Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de Las Casas, Lisa Anne Hendricks, Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katie Millican, George van den Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen Simonyan, Erich Elsen, Jack W. Rae, Oriol Vinyals, Laurent Sifre*
+
+**Summary:** We investigate the optimal model size and number of tokens for training a transformer language model under a given compute budget. We find that current large language models are significantly under-trained, a consequence of the recent focus on scaling size whilst keeping the amount of training data constant.
+
+**ArXiv:** [2203.15556](https://arxiv.org/abs/2203.15556), [Local link](Papers/2203.15556v1_Training%20Compute-Optimal%20Large%20Language%20Models.pdf), Hash: acb47d6c4ce87a62c9edd0db18610618, *Added: 2024-11-10* 
 

@@ -743,3 +743,67 @@
 
 **ArXiv:** [2411.04330](https://arxiv.org/abs/2411.04330), [Local link](Papers/2411.04330v1_Scaling%20Laws%20for%20Precision.pdf), Hash: 17fa88dae0abb80379c06931ff1a06f7, *Added: 2024-11-16* 
 
+#### Universal Transformers
+
+*Mostafa Dehghani, Stephan Gouws, Oriol Vinyals, Jakob Uszkoreit, Łukasz Kaiser*
+
+**Summary:** Recurrent neural networks (RNNs) sequentially process data by updating their state with each new data point, and have long been the de facto choice for sequence modeling tasks. However, their inherently sequential computation makes them slow to train. Feed-forward and convolutional architectures have recently been shown to achieve superior results on some sequence modeling tasks such as machine translation, with the added advantage that they concurrently process all inputs in the sequence, leading to easy parallelization and faster training times.
+
+**ArXiv:** [1807.03819](https://arxiv.org/abs/1807.03819), [Local link](Papers/1807.03819v3_UNIVERSAL%20TRANSFORMERS.pdf), Hash: 875cb71a8fec077ef9c33174ff0f04ae, *Added: 2024-12-11* 
+
+#### MoEUT: Mixture-of-Experts Universal Transformers
+
+*Róbert Csordás, Kazuki Irie, Jürgen Schmidhuber, Christopher Potts, Christopher D. Manning*
+
+**Summary:** We propose MoEUT, an effective mixture-of-experts (MoE)-based shared-layer Transformer architecture, which combines several recent advances in MoEs for both feedforward and attention layers of standard Transformers together with novel layer-normalization and grouping schemes that are specific and crucial to UTs.
+
+**ArXiv:** [2405.16039](https://arxiv.org/abs/2405.16039), [Local link](Papers/2405.16039v2_ixture-of-Experts%20Universal%20Transformers.pdf), Hash: 1b4315d63eeb14a5f75fd1bcfc93dfe3, *Added: 2024-12-11* 
+
+#### Accessing Gpt-4 Level Mathematical Olympiad Solutions via Monte Carlo Tree Self-refine with Llama-3 8B: A Technical Report
+
+*Di Zhang, Xiaoshui Huang, Dongzhan Zhou, Yuqiang Li, Wanli Ouyang*
+
+**Summary:** This paper introduces the MCT Self-Refine (MCTSr) algorithm, an innovative integration of Large Language Models (LLMs) with Monte Carlo Tree Search (MCTS), designed to enhance performance in complex mathematical reasoning tasks.
+
+**ArXiv:** [2406.07394](https://arxiv.org/abs/2406.07394), [Local link](Papers/2406.07394v2_mctsr.pdf), Hash: a900fa60e9971a7181b21bae275e94dd, *Added: 2024-12-11* 
+
+#### VPTQ: Extreme Low-bit Vector Post-Training Quantization for Large Language Models
+
+*Yifei Liu, Jicheng Wen, Yang Wang, Shengyu Ye, Li Lyna Zhang, Ting Cao, Cheng Li, Mao Yang*
+
+**Summary:** We introduce Vector Post-Training Quantization (VPTQ) for extremely low-bit quantization of Large Language Models, using Second-Order Optimization to formulate the LLM VQ problem and guide our quantization algorithm design by solving the optimization.
+
+**ArXiv:** [2409.17066](https://arxiv.org/abs/2409.17066), [Local link](Papers/2409.17066v2_VPTQ.pdf), Hash: af8ff48a50c92f2320a2c1cbbafe431e, *Added: 2024-12-11* 
+
+#### How Numerical Precision Affects Mathematical Reasoning Capabilities of LLMs
+
+*Guhao Feng, Kai Yang, Yuntian Gu, Xinyue Ai, Shengjie Luo, Jiacheng Sun, Di He, Zhenguo Li, Liwei Wang*
+
+**Summary:** Despite the remarkable success of Transformer-based Large Language Models (LLMs) across various domains, understanding and enhancing their mathematical capabilities remains a significant challenge. In this paper, we conduct a rigorous theoretical analysis of LLMs' mathematical abilities, with a specific focus on their arithmetic performances. We identify numerical precision as a key factor that influences their effectiveness in mathematical tasks.
+
+**ArXiv:** [2410.13857](https://arxiv.org/abs/2410.13857), [Local link](Papers/2410.13857v1_How%20Numerical%20Precision%20Affects%20Mathematical%20Reasoning%20Capabilities%20of%20LLMs.pdf), Hash: 9260970ce466007a7107a47b631a36ca, *Added: 2024-12-11* 
+
+#### Convolutional Differentiable Logic Gate Networks
+
+*Felix Petersen, Hilde Kuehne, Christian Borgelt, Julian Welzel, Stefano Ermon*
+
+**Summary:** With the increasing inference cost of machine learning models, there is a growing interest in models with fast and efficient inference. Recently, an approach for learning logic gate networks directly via a differentiable relaxation was proposed. Logic gate networks are faster than conventional neural network approaches because their inference only requires logic gate operators such as NAND, OR, and XOR, which are the underlying building blocks of current hardware and can be efficiently executed.
+
+**ArXiv:** [2411.04732](https://arxiv.org/abs/2411.04732), [Local link](Papers/2411.04732v1_Convolutional%20Differentiable%20Logic%20Gate%20Networks.pdf), Hash: 9d34740e0103d1c3361cefdeca11e327, *Added: 2024-12-11* 
+
+#### A Hybrid-head Architecture for Small Language Models
+
+*Xin Dong, Yonggan Fu, Shizhe Diao, Wonmin Byeon, Zijia Chen, Ameya Sunil Mahabaleshwarkar, Shih-Yang Liu, Matthijs Van Keirsbilck, Min-Hung Chen, Yoshi Suhara, Yingyan Celine Lin, Jan Kautz, Pavlo Molchanov*
+
+**Summary:** We propose Hymba, a family of small language models featuring a hybrid-head parallel architecture that integrates transformer attention mechanisms with state space models (SSMs) for enhanced efficiency. Attention heads provide high-resolution recall, while SSM heads enable efficient context summarization.
+
+**ArXiv:** [2411.13676](https://arxiv.org/abs/2411.13676), [Local link](Papers/2411.13676v1_Hymba.pdf), Hash: 8151724137e6538fb2f0bd0bfbbdb399, *Added: 2024-12-11* 
+
+#### Low-Bit Quantization Favors Undertrained LLMs: Scaling Laws for Quantized LLMs with 100T Training Tokens
+
+*Xu Ouyang, Tao Ge, Thomas Hartvigsen, Zhisong Zhang, Haitao Mi, Dong Yu*
+
+**Summary:** This paper reveals that low-bit quantization favors undertrained large language models (LLMs) by observing that models with larger sizes or fewer training tokens experience less quantization-induced degradation (QiD) when applying low-bit quantization, whereas smaller models with extensive training tokens suffer significant QiD.
+
+**ArXiv:** [2411.17691](https://arxiv.org/abs/2411.17691), [Local link](Papers/2411.17691v2_Low-Bit%20Quantization%20Favors%20Undertrained%20LLMs.pdf), Hash: d7be68b5834160c873d2c83e49593aeb, *Added: 2024-12-11* 
+

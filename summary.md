@@ -719,3 +719,27 @@
 
 **ArXiv:** [2203.15556](https://arxiv.org/abs/2203.15556), [Local link](Papers/2203.15556v1_Training%20Compute-Optimal%20Large%20Language%20Models.pdf), Hash: acb47d6c4ce87a62c9edd0db18610618, *Added: 2024-11-10* 
 
+#### PyPIM: Integrating Digital Processing-in-Memory from Microarchitectural Design to Python Tensors
+
+*Orian Leitersdorf, Ronny Ronen, Shahar Kvatinsky*
+
+**Summary:** This paper provides an end-to-end architectural integration of digital memristive PIM from a high-level Python library for tensor operations to the low-level microarchitectural design.
+
+**ArXiv:** [2308.14007](https://arxiv.org/abs/2308.14007), [Local link](Papers/2308.14007v2_PyPIM.pdf), Hash: d0c7bde579fc669199b9dbfdb476ecdd, *Added: 2024-11-16* 
+
+#### VALUE RESIDUAL LEARNING FOR ALLEVIATING ATTENTION CONCENTRATION IN TRANSFORMERS
+
+*Zhanchao Zhou, Tianyi Wu, Zhiyun Jiang, Zhenzhong Lan*
+
+**Summary:** Transformers can capture long-range dependencies using self-attention, allowing tokens to attend to all others directly. However, stacking multiple attention layers leads to attention concentration. One natural way to address this issue is to use cross-layer attention, allowing information from earlier layers to be directly accessible to later layers. However, this approach is computationally expensive. To address this problem, we propose Transformer with residual value (ResFormer) which approximates cross-layer attention through adding a residual connection from the values of the the first layer to all subsequent layers.
+
+**ArXiv:** [2410.17897](https://arxiv.org/abs/2410.17897), [Local link](Papers/2410.17897v1_VALUE%20RESIDUAL%20LEARNING.pdf), Hash: e51bbd92587e0129b79cafa148e2fcec, *Added: 2024-11-16* 
+
+#### Scaling Laws for Precision
+
+*Tanishq Kumar, Zachary Ankner, Benjamin F. Spector, Blake Bordelon, Niklas Muennighoff, Mansheej Paul, Cengiz Pehlevan, Christopher Ré, Aditi Raghunathan*
+
+**Summary:** Low precision training and inference affect both the quality and cost of language models, but current scaling laws do not account for this. In this work, we devise "precision-aware" scaling laws for both training and inference.
+
+**ArXiv:** [2411.04330](https://arxiv.org/abs/2411.04330), [Local link](Papers/2411.04330v1_Scaling%20Laws%20for%20Precision.pdf), Hash: 17fa88dae0abb80379c06931ff1a06f7, *Added: 2024-11-16* 
+

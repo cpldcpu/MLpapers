@@ -807,3 +807,83 @@
 
 **ArXiv:** [2411.17691](https://arxiv.org/abs/2411.17691), [Local link](Papers/2411.17691v2_Low-Bit%20Quantization%20Favors%20Undertrained%20LLMs.pdf), Hash: d7be68b5834160c873d2c83e49593aeb, *Added: 2024-12-11* 
 
+#### Large Memory Layers with Product Keys
+
+*Guillaume Lample, Alexandre Sablayrolles, Marc'Aurelio Ranzato, Ludovic Denoyer, Herv'e Jegou*
+
+**Summary:** This paper introduces a structured memory which can be easily integrated into a neural network. The memory is very large by design and significantly increases the capacity of the architecture, by up to a billion parameters with a negligible computational overhead.
+
+**ArXiv:** [1907.05242](https://arxiv.org/abs/1907.05242), [Local link](Papers/1907.05242v2_Large%20Memory%20Layers%20with%20Product%20Keys.pdf), Hash: ef23126232c6b56adc91789c05a6ba0d, *Added: 2024-12-27* 
+
+#### GLU Variants Improve Transformer FFN
+
+*Noam Shazeer*
+
+**Summary:** Variations on GLU are possible, using different nonlinear (or even linear) functions in place of sigmoid. We test these variants in the feed-forward sublayers of the Transformer sequence-to-sequence model, and find that some of them yield quality improvements over the typically-used ReLU or GELU activations.
+
+**ArXiv:** [2002.05202v1](https://arxiv.org/abs/2002.05202v1), [Local link](Papers/2002.05202v1_GLU%20Variants%20Improve%20Transformer.pdf), Hash: 8781c29b4f58681ea17211c4e9e5e3f9, *Added: 2024-12-27* 
+
+#### Gradients without Backpropagation
+
+*Atölım Günes Baydin, Barak A. Pearlmutter, Don Syme, Frank Wood, Philip Torr*
+
+**Summary:** We present a method to compute gradients based solely on the directional derivative that can be evaluated in a single forward run of the function, entirely eliminating the need for back-propagation in gradient descent.
+
+**ArXiv:** [2202.08587](https://arxiv.org/abs/2202.08587), [Local link](Papers/2202.08587v1_Gradients%20without%20Backpropagation.pdf), Hash: daa9ee81ab383dc4d86cec2a94230c86, *Added: 2024-12-27* 
+
+#### QTIP: Quantization with Trellises and Incoherence
+
+*Albert Tseng, Qingyao Sun, David Hou, Christopher De Sa*
+
+**Summary:** Post-training quantization (PTQ) reduces the memory footprint of LLMs by quantizing weights to low-precision datatypes. Since LLM inference is usually memory-bound, PTQ methods can improve inference throughput.
+
+**ArXiv:** [2406.11235](https://arxiv.org/abs/2406.11235), [Local link](Papers/2406.11235v3_QTIP_Quantization%20with%20Trellises%20and%20Incoherence.pdf), Hash: 82d79aceac9594cae0b01c197081f74c, *Added: 2024-12-27* 
+
+#### Flow Matching Guide and Code
+
+*Yaron Lipman, Marton Havasi, Peter Holderrieth, Neta Shaul, Matt Le, Brian Karrer, Ricky T. Q. Chen, David Lopez-Paz, Heli Ben-Hamu, Itai Gat*
+
+**Summary:** Flow Matching (FM) is a recent framework for generative modeling that has achieved state-of-the-art performance across various domains, including image, video, audio, speech, and biological structures. This guide offers a comprehensive and self-contained review of FM, covering its mathematical foundations, design choices, and extensions.
+
+**ArXiv:** [2412.06264](https://arxiv.org/abs/2412.06264), [Local link](Papers/2412.06264v1_Flow%20Matching%20Guide%20and%20Code.pdf), Hash: 2cee47d8cecdf2cca0ce6741a15e5d6b, *Added: 2024-12-27* 
+
+#### Training Large Language Models to Reason in a Continuous Latent Space
+
+*Shibo Hao, Sainbayar Sukhbaatar, DiJia Su, Xian Li, Zhiting Hu, Jason Weston, Yuandong Tian*
+
+**Summary:** To explore the potential of LLM reasoning in an unrestricted latent space instead of using natural language, we introduce a new paradigm Coconut (ChainofContinuousThought). Experiments show that Coconut can effectively augment the LLM on several reasoning tasks.
+
+**ArXiv:** [2412.06769](https://arxiv.org/abs/2412.06769), [Local link](Papers/2412.06769v1_coconut.pdf), Hash: 87493b967bec98bd1067df536c155310, *Added: 2024-12-27* 
+
+#### DeepSeek-V3 Technical Report
+
+*DeepSeek-AI*
+
+**Summary:** We present DeepSeek-V3, a strong Mixture-of-Experts (MoE) language model with 671B total parameters with 37B activated for each token. To achieve efficient inference and cost-effective training, DeepSeek-V3 adopts Multi-head Latent Attention (MLA) and DeepSeekMoE architectures, which were thoroughly validated in DeepSeek-V2.
+
+**ArXiv:** [2108.07732](https://arxiv.org/abs/2108.07732), [Local link](Papers/DeepSeek_V3.pdf), Hash: 03697914c89904d28cc11c7c596901cc, *Added: 2024-12-27* 
+
+#### Stationary and Trellis Encoding for IID Sources and Simulation
+
+*Mark Z. Mao, Robert M. Gray*
+
+**Summary:** Necessary conditions for asymptotically optimal sliding-block or stationary codes for source coding and rate-constrained simulation are presented and applied to a design technique for trellis-encoded source coding and rate constrained simulation of memoryless sources.
+
+**ArXiv:** N/A, [Local link](Papers/mao2010.pdf), Hash: 343f8440527dc7b3680a11ef171711d0, *Added: 2024-12-27* 
+
+#### Trellis Coded Quantization of Memoryless and Gauss-Markov Sources
+
+*Michael W. Marcellin, Thomas R. Fischer*
+
+**Summary:** Exploiting the duality between modulation for digital communications and source coding, trellis coded quantization (TCQ) is developed and applied to the encoding of memoryless and Gauss-Markov sources.
+
+**ArXiv:** N/A, [Local link](Papers/marcellin1990_Trellis%20Coded%20Quantization%20of%20Memoryless%20and.pdf), Hash: 1e5018079047212dc00efddce62d3f0e, *Added: 2024-12-27* 
+
+#### Memory Layers at Scale
+
+*Vincent-Pierre Berges, Barlas Oğuz, Daniel Haziza, Wen-tau Yih, Luke Zettlemoyer, Gargi Gosh*
+
+**Summary:** This work takes memory layers beyond proof-of-concept, proving their utility at contemporary scale. On downstream tasks, language models augmented with our improved memory layer outperform dense models with more than twice the computation budget, as well as mixture-of-expert models when matched for both compute and parameters.
+
+**ArXiv:** N/A, [Local link](Papers/Memory%20Layers%20at%20Scale.pdf), Hash: 2a6e4743aa6dd2fab537b43830cf9964, *Added: 2024-12-27* 
+

@@ -153,55 +153,135 @@ def read_existing_markdown(file_path):
             content = f.read()
             pattern = r' \[Local link\]\((.+?)\), Hash: (.+?), \*Added: (.+?)\*'
             matches = re.findall(pattern, content)
-            print(matches)
             for file_path_escaped, file_hash, date_added in matches:
-                processed_papers[file_path_escaped] = file_hash
-                print(f"Found existing paper: {file_path}, Hash: {file_hash}")
+                # Unescape the file path and normalize it
+                file_path = urllib.parse.unquote(file_path_escaped)
+                file_path = os.path.normpath(file_path)
+                processed_papers[file_path] = file_hash
+                logger.debug(f"Found existing paper: {file_path}, Hash: {file_hash}")
     return processed_papers
 
-def create_or_update_markdown(results, output_file, processed_papers):
-    with open(output_file, 'a', encoding='utf-8') as f:
-        for paper_info in results:
-            f.write(f"#### {paper_info['title']}\n\n")
-            f.write(f"*{', '.join(paper_info['authors'])}*\n\n")
-            f.write(f"**Summary:** {paper_info['summary']}\n\n")
-            
-            arxiv_number = paper_info['arxiv_number']
-            if arxiv_number != "N/A":
-                arxiv_link = f"https://arxiv.org/abs/{arxiv_number}"
-                f.write(f"**ArXiv:** [{arxiv_number}]({arxiv_link}), ")
-            else:
-                f.write(f"**ArXiv:** {arxiv_number}, ")
+def generate_section_name(folder_path):
+    """Generate a descriptive section name from a folder path using the LLM."""
+    if folder_path == "":
+        return "Unsorted Papers"
+        
+    query = f"""Given the folder name '{os.path.basename(folder_path)}', generate a short but descriptive section title 
+    that would categorize AI/ML research papers in this folder. Return ONLY the title, nothing else.
+    The title should be in title case and should not contain any special characters."""
+    
+    prompt = [
+        {"role": "system", "content": "You are a helpful assistant that generates concise section titles."},
+        {"role": "user", "content": query}
+    ]
+    
+    response = requests.post(
+        "http://localhost:1234/v1/chat/completions",
+        headers={"Content-Type": "application/json"},
+        json={
+            "messages": prompt,
+            "temperature": 0.7,
+            "max_tokens": 50
+        }
+    )
+    
+    if response.status_code == 200:
+        title = response.json()['choices'][0]['message']['content'].strip()
+        return title
+    return os.path.basename(folder_path).replace('_', ' ').title()
 
-            date_added = datetime.now().strftime("%Y-%m-%d")            
-            
-            escaped_link = urllib.parse.quote(paper_info['file_path'])
-            f.write(f"[Local link]({escaped_link}), Hash: {paper_info['file_hash']}, *Added: {date_added}* \n\n")
+def create_or_update_markdown(results, output_file, processed_papers):
+    # Group papers by their sections
+    sections = {}
+    for paper_info in results:
+        section = paper_info.get('section', 'Unsorted Papers')
+        if section not in sections:
+            sections[section] = []
+        sections[section].append(paper_info)
+    
+    # Write the markdown file
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write("# Research Paper Summaries\n\n")
+        
+        # Generate Table of Contents
+        f.write("## Table of Contents\n\n")
+        for section_name in sorted(sections.keys()):
+            # Create a link-friendly version of the section name
+            section_link = section_name.lower().replace(' ', '-')
+            f.write(f"- [{section_name}](#{section_link})\n")
+            # Add paper titles as sub-items in TOC
+            for paper_info in sections[section_name]:
+                paper_link = paper_info['title'].lower().replace(' ', '-')
+                # Remove special characters from link
+                paper_link = re.sub(r'[^a-z0-9-]', '', paper_link)
+                f.write(f"  - [{paper_info['title']}](#{paper_link})\n")
+        f.write("\n---\n\n")  # Add a horizontal line after TOC
+        
+        # Process each section
+        for section_name in sorted(sections.keys()):
+            f.write(f"## {section_name}\n\n")
+            for paper_info in sections[section_name]:
+                f.write(f"### {paper_info['title']}\n\n")
+                f.write(f"*{', '.join(paper_info['authors'])}*\n\n")
+                f.write(f"**Summary:** {paper_info['summary']}\n\n")
+                
+                arxiv_number = paper_info['arxiv_number']
+                if arxiv_number != "N/A":
+                    arxiv_link = f"https://arxiv.org/abs/{arxiv_number}"
+                    f.write(f"**ArXiv:** [{arxiv_number}]({arxiv_link}), ")
+                else:
+                    f.write(f"**ArXiv:** {arxiv_number}, ")
+
+                date_added = datetime.now().strftime("%Y-%m-%d")            
+                
+                rel_path = os.path.relpath(paper_info['file_path'], start=os.path.dirname(output_file))
+                escaped_link = urllib.parse.quote(rel_path)
+                f.write(f"[Local link]({escaped_link}), Hash: {paper_info['file_hash']}, *Added: {date_added}* \n\n")
 
 def main(folder_path, output_file):
+    # Normalize paths
+    folder_path = os.path.abspath(folder_path)
+    output_file = os.path.abspath(output_file)
+    logger.info(f"Starting to process papers in: {folder_path}")
+    
     processed_papers = read_existing_markdown(output_file)
     new_results = []
     
-    for i, filename in enumerate(os.listdir(folder_path)):
+    # Walk through all subdirectories
+    for root, dirs, files in os.walk(folder_path):
+        logger.info(f"Traversing directory: {root}")
+        logger.debug(f"Found subdirectories: {dirs}")
+        logger.debug(f"Found files: {files}")
+        
         if num_of_papers > 0 and len(new_results) >= num_of_papers:
             break
-        if filename.endswith('.pdf'):
-            file_path = os.path.join(folder_path, filename)
-            file_hash = get_file_hash(file_path)
-            file_path_escaped = urllib.parse.quote(file_path)
-
-            # Check if the file has been processed before and its hash hasn't changed
-            if file_path_escaped in processed_papers and processed_papers[file_path_escaped] == file_hash:
-                print(f"Skipping already processed file: {file_path}")
-                continue
             
-            logger.info(f"Processing file: {file_path}")
-            text = extract_text_from_pdf(file_path)
-            paper_info = get_paper_info(text)
-            if paper_info:
-                paper_info['file_path'] = file_path
-                paper_info['file_hash'] = file_hash
-                new_results.append(paper_info)
+        # Get relative path for section name
+        rel_path = os.path.relpath(root, folder_path)
+        if rel_path == ".":
+            rel_path = ""
+        section_name = generate_section_name(rel_path)
+        logger.info(f"Processing section: {section_name} ({rel_path})")
+            
+        for filename in files:
+            if filename.endswith('.pdf'):
+                file_path = os.path.join(root, filename)
+                file_path = os.path.normpath(file_path)
+                file_hash = get_file_hash(file_path)
+                
+                # Use normalized path for comparison
+                if file_path in processed_papers and processed_papers[file_path] == file_hash:
+                    logger.info(f"Skipping already processed file: {file_path}")
+                    continue
+                
+                logger.info(f"Processing file: {file_path}")
+                text = extract_text_from_pdf(file_path)
+                paper_info = get_paper_info(text)
+                if paper_info:
+                    paper_info['file_path'] = file_path
+                    paper_info['file_hash'] = file_hash
+                    paper_info['section'] = section_name
+                    new_results.append(paper_info)
     
     if new_results:
         create_or_update_markdown(new_results, output_file, processed_papers)
@@ -210,6 +290,8 @@ def main(folder_path, output_file):
         logger.info("No new papers to add.")
 
 if __name__ == "__main__":
-    folder_path = "Papers/"
-    output_file = "summary.md"
+    # Use absolute paths for better reliability
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    folder_path = os.path.join(script_dir, "Papers")
+    output_file = os.path.join(script_dir, "summary.md")
     main(folder_path, output_file)
